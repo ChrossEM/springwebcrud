@@ -3,34 +3,45 @@ package com.excer.webcrud.models.dao;
 import com.excer.webcrud.models.entity.Cliente;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
-import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Repository
-public class ClienteDaoImpl implements IClienteDao{
+public class ClienteDaoImpl implements IClienteDao {
+
     @PersistenceContext
     private EntityManager em;
 
-
+    @SuppressWarnings("unchecked")
+    @Transactional(readOnly = true)
     @Override
     public List<Cliente> findAll() {
-        return null;
+        // TODO Auto-generated method stub
+        return em.createQuery("from Cliente").getResultList();
     }
 
     @Override
-    public void save(Cliente cliente) {
-
-    }
-
-    @Override
+    @org.springframework.transaction.annotation.Transactional(readOnly = true)
     public Cliente findOne(Long id) {
-        return null;
+        return em.find(Cliente.class, id);
     }
 
     @Override
-    public void delete(Long id) {
-
+    @org.springframework.transaction.annotation.Transactional
+    public void save(Cliente cliente) {
+        if (cliente.getId() != 0 && cliente.getId() > 0) {
+            em.merge(cliente);
+        } else {
+            em.persist(cliente);
+        }
     }
+
+    @Override
+    @Transactional
+    public void delete(Long id) {
+        em.remove(findOne(id));
+    }
+
 }

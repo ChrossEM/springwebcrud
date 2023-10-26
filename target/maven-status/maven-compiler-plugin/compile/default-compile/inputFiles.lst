@@ -1,6 +1,11 @@
 C:\Users\CEMC_P\Desktop\spring crud\sprong crud\webcrud\src\main\java\com\excer\webcrud\models\service\IClienteService.java
+C:\Users\CEMC_P\Desktop\spring crud\sprong crud\webcrud\src\main\java\com\excer\webcrud\models\service\IUploadFileService.java
 C:\Users\CEMC_P\Desktop\spring crud\sprong crud\webcrud\src\main\java\com\excer\webcrud\models\service\ClienteServiceImpl.java
-C:\Users\CEMC_P\Desktop\spring crud\sprong crud\webcrud\src\main\java\com\excer\webcrud\controller\ClienteController.java
+C:\Users\CEMC_P\Desktop\spring crud\sprong crud\webcrud\src\main\java\com\excer\webcrud\MvcConfig.java
 C:\Users\CEMC_P\Desktop\spring crud\sprong crud\webcrud\src\main\java\com\excer\webcrud\models\dao\IClienteDao.java
 C:\Users\CEMC_P\Desktop\spring crud\sprong crud\webcrud\src\main\java\com\excer\webcrud\models\entity\Cliente.java
+C:\Users\CEMC_P\Desktop\spring crud\sprong crud\webcrud\src\main\java\com\excer\webcrud\models\service\UploadFileServiceImpl.java
+C:\Users\CEMC_P\Desktop\spring crud\sprong crud\webcrud\src\main\java\com\excer\webcrud\util\Paginator\PageItem.java
+C:\Users\CEMC_P\Desktop\spring crud\sprong crud\webcrud\src\main\java\com\excer\webcrud\util\Paginator\PageRender.java
 C:\Users\CEMC_P\Desktop\spring crud\sprong crud\webcrud\src\main\java\com\excer\webcrud\WebcrudApplication.java
+C:\Users\CEMC_P\Desktop\spring crud\sprong crud\webcrud\src\main\java\com\excer\webcrud\controllers\ClienteController.java

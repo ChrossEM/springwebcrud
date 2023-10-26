@@ -1,14 +1,16 @@
 package com.excer.webcrud.models.entity;
 
-import java.io.Serializable;
-import java.util.Date;
-
-
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import org.springframework.format.annotation.DateTimeFormat;
+
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "clientes")
@@ -31,8 +33,17 @@ public class Cliente implements Serializable {
 	@NotNull
 	@Column(name = "create_at")
 	@Temporal(TemporalType.DATE)
-	@DateTimeFormat(pattern="yyyy-MM-dd")
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date createAt;
+
+	@OneToMany(mappedBy = "cliente", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	private List<Factura> facturas;
+
+	private String foto;
+
+	public Cliente() {
+		facturas = new ArrayList<Factura>();
+	}
 
 	public Long getId() {
 		return id;
@@ -74,6 +85,26 @@ public class Cliente implements Serializable {
 		this.createAt = createAt;
 	}
 
+	public String getFoto() {
+		return foto;
+	}
+
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
+
+	public List<Factura> getFacturas() {
+		return facturas;
+	}
+
+	public void setFacturas(List<Factura> facturas) {
+		this.facturas = facturas;
+	}
+
+	public void addFactura(Factura factura) {
+		facturas.add(factura);
+	}
+
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
@@ -81,3 +112,4 @@ public class Cliente implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 }
+

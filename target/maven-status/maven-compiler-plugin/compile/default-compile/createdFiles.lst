@@ -1,3 +1,5 @@
-com\excer\webcrud\models\service\IClienteService.class
-com\excer\webcrud\models\entity\Cliente.class
+com\excer\webcrud\util\Paginator\PageItem.class
+com\excer\webcrud\models\service\UploadFileServiceImpl.class
+com\excer\webcrud\util\Paginator\PageRender.class
 com\excer\webcrud\WebcrudApplication.class
+com\excer\webcrud\MvcConfig.class

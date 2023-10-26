@@ -1,0 +1,3 @@
+com\excer\webcrud\models\service\IClienteService.class
+com\excer\webcrud\models\entity\Cliente.class
+com\excer\webcrud\WebcrudApplication.class
